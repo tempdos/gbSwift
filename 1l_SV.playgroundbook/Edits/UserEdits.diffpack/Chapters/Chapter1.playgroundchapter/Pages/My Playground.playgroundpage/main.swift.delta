@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Функция извлечения квадратного корня
+func sqrt(x: Double) -&gt; Double {
+    return Double(x).squareRoot()
+}
+
+// Homework 1
+print("Домашнее задание 1")
+print("Решить квадратное уравнение")
+var a: Double = -1
+var b: Double = -2
+var c: Double = 15
+print("Дано:")
+print("a =", a)
+print("b =", b)
+print("c =", c)
+var d: Double = (b*b) - (4 * a * c)
+var x1: Double?
+var x2: Double?
+print("Ответ:")
+print("Дискриминант равен", d)
+if d &gt; 0 {
+    x1 = (-b + sqrt(x: d))/2*a
+    x2 = (-b - sqrt(x: d))/2*a
+    print("x1 =", x1!)
+    print("x2 =", x2!)
+} else if(d == 0) {
+    x1 = -(b/(2*a))
+    print("x1 =", x1!)
+} else {
+    print("нет корней")
+}
+
+// Homework 2
+print("\nДомашнее задание 2")
+print("Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника")
+a = 6
+b = 8
+print("Дано:")
+print("a =", a)
+print("b =", b)
+var s = a * b / 2
+print("Ответ:")
+print("Площадь равна", s)
+var p: Double = (sqrt(x: (a*a) + (b*b))) + Double(a) + Double(b)
+print("Периметр равен", p)
+c = sqrt(x: (a*a)+(b*b))
+print("Гипотенуза равна", c)
+
+// Homework 3
+print("\nДомашнее задание 3")
+print("Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет")
+let sum: Double = 15000
+let percent: Double = 8
+let year: Int = 5
+print("Дано:")
+print("Сумма:", sum)
+print("Процент", percent)
+print("Срок:", year)
+var deposit: Double = sum
+for i in 1 ... year {
+    deposit = deposit + (deposit * percent / 100.0)
+}
+print("Ответ:")
+deposit = (deposit * 100).rounded() / 100
+print("Сумма вклада через", year,"лет составит", deposit)
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1563}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
